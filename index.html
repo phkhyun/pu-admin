@@ -49,7 +49,7 @@
                 <span class="font"><i class="fas fa-home"></i>&nbsp;&nbsp;Dashboard</span>
               </button>
             </div>
-        
+            
             <div id="collapseOne" class="collapse" data-parent="#menuList">
               <div class="card-body">
                 <span class="font"><i class="fas fa-angle-right"></i>&nbsp;Defalut</span>
@@ -63,7 +63,7 @@
             <div class="card-header" id="listTwo">
               <div class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  메뉴2
+                  <span class="font"><i class="fas fa-edit"></i>&nbsp;&nbsp;Forms</span>
                 </button>
               </div>
             </div>
@@ -83,7 +83,7 @@
             <div class="card-header" id="listThree">
               <div class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  메뉴3
+                  <span class="font"><i class="fas fa-desktop"></i>&nbsp;&nbsp;Ul Elements</span>
                 </button>
               </div>
             </div>
@@ -96,7 +96,57 @@
               </div>                 
             </div>
           </div>
-        
+          <div class="card">
+            <div class="card-header" id="listThree">
+              <div class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <span class="font"><i class="fas fa-table"></i>&nbsp;&nbsp;Tables</span>
+                </button>
+              </div>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#menuList">
+              <div class="card-body">
+                  1
+              </div>
+              <div class="card-body">
+                2
+              </div>                 
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="listThree">
+              <div class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <span class="font"><i class="fas fa-chart-pie"></i>&nbsp;&nbsp;Charts</span>
+                </button>
+              </div>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#menuList">
+              <div class="card-body">
+                  1
+              </div>
+              <div class="card-body">
+                  2
+              </div>                 
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="listThree">
+              <div class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <span class="font"><i class="fas fa-clone"></i>&nbsp;&nbsp;Layouts</span>
+                </button>
+              </div>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#menuList">
+              <div class="card-body">
+                  1
+              </div>
+              <div class="card-body">
+                2
+              </div>                 
+            </div>
+          </div>        
           <div class="menu-panel">
               분류2
           </div>
@@ -156,14 +206,72 @@
             </div>
           </div>
         </div>
-        <div class="menu-panel">
-            분류3
-        </div>
       </div>
       <div class="right-col content-wrapper">
-        바디
+        <div class="row">
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            ssdsds
+          </div>
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            ssdsds
+          </div>
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            ssdsds
+          </div>
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            ssdsds
+          </div>
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            ssdsds
+          </div>
+          <div class="col-md-2 col-sm-4 col-xs-6">
+            ssdsds
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+              <canvas id="lineChart"></canvas>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <script>
+  //line
+  var ctxL = document.getElementById("lineChart").getContext('2d');
+  var myLineChart = new Chart(ctxL, {
+    type: 'line',
+    data: {
+      labels: ["January", "February", "March", "April", "May", "June", "July"],
+      datasets: [{
+          label: "My First dataset",
+          data: [65, 59, 80, 81, 56, 55, 40],
+          backgroundColor: [
+            'rgba(105, 0, 132, .2)',
+          ],
+          borderColor: [
+            'rgba(200, 99, 132, .7)',
+          ],
+          borderWidth: 2
+        },
+        {
+          label: "My Second dataset",
+          data: [28, 48, 40, 19, 86, 27, 90],
+          backgroundColor: [
+            'rgba(0, 137, 132, .2)',
+          ],
+          borderColor: [
+            'rgba(0, 10, 130, .7)',
+          ],
+          borderWidth: 2
+        }
+      ]
+    },
+    options: {
+      responsive: true
+    }
+  });
+
+</script>
 </body>
 </html>
