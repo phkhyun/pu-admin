@@ -208,94 +208,75 @@
           </div>
         </div>
       </div>
-      <div class="right-col content-wrapper">
+      <div class="right-col">
         <div class="row">
           <div class="col-md-2 col-sm-4 col-xs-6">
-            ssdsds
+            <div><span class="count-top">총 사용자</span></div>
+            <div><span class="count-mid">30000</span></div>
+            <div><span class="count-bottom">지난주부터</span></div>
           </div>
           <div class="col-md-2 col-sm-4 col-xs-6">
-            ssdsds
+            <div><span class="count-top">평균 시간</span></div>
+            <div><span class="count-mid">425.30</span></div>
+            <div> <span class="count-bottom">지난주부터</span></div>
           </div>
           <div class="col-md-2 col-sm-4 col-xs-6">
-            ssdsds
+            <div><span class="count-top">총 남성</span></div>
+            <div><span class="count-mid">15000</span></div>
+            <div><span class="count-bottom">지난주부터</span></div>
           </div>
           <div class="col-md-2 col-sm-4 col-xs-6">
-            ssdsds
+            <div><span class="count-top">총 여성</span></div>
+            <div><span class="count-mid">15000</span></div>
+            <div><span class="count-bottom">지난주부터</span></div>
           </div>
           <div class="col-md-2 col-sm-4 col-xs-6">
-            ssdsds
+            <div><span class="count-top">총 컬렉션</span></div>
+            <div><span class="count-mid">2,331</span></div>
+            <div><span class="count-bottom">지난주부터</span></div>
           </div>
           <div class="col-md-2 col-sm-4 col-xs-6">
-            ssdsds
+            <div><span class="count-top">총 연결</span></div>
+            <div><span class="count-mid">8,234</span></div>
+            <div><span class="count-bottom">지난주부터</span></div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs-12">
+          <div class="col-md-8 col-sm-8 col-xs-8">
               <canvas id="lineChart"></canvas>
           </div>
+          <div class="col-md-4 col-sm-4 col-xs-4">
+              
+              progress ?
+          </div>
+          
         </div>
         <div class="row">
           <div class="col-md-4 col-xsm-4 col-xs-12">
-            test<br>
+            <div class="panel-box">
+              <div class="panel-head">
+                앱 버전
+              </div>
+              <div class="panel-body">
+                  <span progress-font>1.0.0 </span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                    70%
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-md-4 col-xsm-4 col-xs-12">
-            test<br>
+            <canvas id="doughnutChart"></canvas>
           </div>
           <div class="col-md-4 col-xsm-4 col-xs-12">
             test<br>
           </div>
         </div>
       </div>
-    </div>
-    <canvas id="chLine" height="100"></canvas>
-  </div>
 <script>
-    /* chart.js chart examples */
-
-  // chart colors
-  var colors = ['#007bff','#28a745','#333333','#c3e6cb','#dc3545','#6c757d'];
-
-  /* large line chart */
-  var chLine = document.getElementById("chLine");
-
-  var chartData = {
-    labels: ["S", "M", "T", "W", "T", "F", "S"],
-    datasets: [{
-      data: [589, 445, 483, 503, 689, 692, 634],
-      backgroundColor: 'transparent',
-      borderColor: colors[0],
-      borderWidth: 4,
-      pointBackgroundColor: colors[0]
-    },
-    {
-      data: [639, 465, 493, 478, 589, 632, 674],
-      backgroundColor: colors[3],
-      borderColor: colors[1],
-      borderWidth: 4,
-      pointBackgroundColor: colors[1]
-    }]
-  };
-
-  if (chLine) {
-    new Chart(chLine, {
-    type: 'line',
-    data: chartData,
-    options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: false
-          }
-        }]
-      },
-      legend: {
-        display: false
-      }
-    }
-    });
-  }
-</script>
-  <!-- <script>
   //line
   var ctxL = document.getElementById("lineChart").getContext('2d');
   var myLineChart = new Chart(ctxL, {
@@ -331,6 +312,25 @@
     }
   });
 
-</script> -->
+</script>
+<script>
+    //doughnut
+    var ctxD = document.getElementById("doughnutChart").getContext('2d');
+    var myLineChart = new Chart(ctxD, {
+      type: 'doughnut',
+      data: {
+        labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+        datasets: [{
+          data: [300, 50, 100, 40, 120],
+          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    });
+  
+  </script>
 </body>
 </html>
