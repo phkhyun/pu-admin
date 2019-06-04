@@ -15,7 +15,7 @@
     <div class="top-area">
       <div class="left-header">
         <div class="info top-color">
-          <i class="far fa-caret-square-down"></i>
+            <i class="far fa-caret-square-down"></i>
         </div>
         <div class="logoimg top-color">
           <i class="fas fa-user-tie">KPU-Admin</i>
@@ -189,10 +189,10 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-8 col-sm-8 col-8">
+          <div class="back-white col-md-8 col-sm-8 col-8">
               <canvas id="lineChart"></canvas>
           </div>
-          <div class="col-md-4 col-sm-4 col-4">
+          <div class="back-white col-md-4 col-sm-4 col-4">
               
             <progress id="animationProgress" max="100" value="70" style="width: 100%"></progress>
             <progress id="animationProgress" max="100" value="50" style="width: 100%"></progress>
@@ -205,7 +205,7 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-4 col-12">
-            <div class="panel-box" style="height:100%;">
+            <div class="back-white panel-box" style="height:100%;">
               <div class="panel-head">
                 앱 버전
               </div>
@@ -221,7 +221,7 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-12">
-            <div class="panel-box">
+            <div class="back-white panel-box">
               <div class="panel-head">
                 제목
               </div>
@@ -235,61 +235,5 @@
           </div>
         </div>
       </div>
-<script>
-  //line
-  var ctxL = document.getElementById("lineChart").getContext('2d');
-  var myLineChart = new Chart(ctxL, {
-    type: 'line',
-    data: {
-      labels: ["January", "February", "March", "April", "May", "June", "July"],
-      datasets: [{
-          label: "My First dataset",
-          data: [65, 59, 80, 81, 56, 55, 40],
-          backgroundColor: [
-            'rgba(105, 0, 132, .2)',
-          ],
-          borderColor: [
-            'rgba(200, 99, 132, .7)',
-          ],
-          borderWidth: 2
-        },
-        {
-          label: "My Second dataset",
-          data: [28, 48, 40, 19, 86, 27, 90],
-          backgroundColor: [
-            'rgba(0, 137, 132, .2)',
-          ],
-          borderColor: [
-            'rgba(0, 10, 130, .7)',
-          ],
-          borderWidth: 2
-        }
-      ]
-    },
-    options: {
-      responsive: true
-    }
-  });
-
-</script>
-<script>
-    //doughnut
-    var ctxD = document.getElementById("doughnutChart").getContext('2d');
-    var myLineChart = new Chart(ctxD, {
-      type: 'doughnut',
-      data: {
-        labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
-        datasets: [{
-          data: [300, 50, 100, 40, 120],
-          backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
-          hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
-        }]
-      },
-      options: {
-        responsive: true
-      }
-    });
-  
-  </script>
 </body>
 </html>

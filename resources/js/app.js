@@ -1,5 +1,5 @@
 require('../../index.html')
-
+require('chart.js')
 window._ = require('lodash');
 
 try {
